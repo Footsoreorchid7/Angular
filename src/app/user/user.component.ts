@@ -1,7 +1,8 @@
 
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { UserService } from '../users/user.service';
+import { User } from '../interface/user';
+import { UserService } from '../services/user.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { UserService } from '../users/user.service';
 })
 export class UserComponent implements OnInit {
 
-  @Input('user-data') user:any;
+  @Input('user-data') user!:User;
   @Output('onDeleteUser') userDeleted:any = new EventEmitter();
   constructor(private UserService:UserService) { 
     //this.user = ''
@@ -24,6 +25,7 @@ export class UserComponent implements OnInit {
   deleteUser(){
     //alert(this.user.name);
     //this.UserService.deleteUser(this.user)
+    
     this.userDeleted.emit(this.user)
   }
 }
