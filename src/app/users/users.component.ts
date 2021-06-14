@@ -17,4 +17,9 @@ export class UsersComponent implements OnInit {
     ngOnInit(){
         this.users = this.service.getUsers();
     }
+    onDeleteUser(user:any){
+        //alert(user.lastname)
+        this.service.deleteUser(user)
+    }
+
 } /*Esportiamo il modulo per poterlo usare*/
