@@ -7,15 +7,9 @@
         <th>E-mail</th>
         <th>Telefono</th>
         <th>Provincia</th>
+        <th>Azioni</th>
     </tr>
     <!-- {{users | json}} -->
-    <tr *ngFor="let user of users">
-        <td>{{user.name}}</td>
-        <td>{{user.lastname}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.fiscalcode}}</td>
-        <td>{{user.phone}}</td>
-        <td>{{user.province}}</td>
-        <app-user [user-data] = "user"></app-user>
+    <tr app-user *ngFor="let user of users" [user-data] = "user">
     </tr>
 </table>

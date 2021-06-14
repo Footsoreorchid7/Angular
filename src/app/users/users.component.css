@@ -6,11 +6,3 @@ th{
     color:green;
     padding:10px;
 }
-td{
-    background: silver;
-    color:red;
-}
-th,td{
-    padding: 5px;
-    border: 1px solid #fff;
-}
