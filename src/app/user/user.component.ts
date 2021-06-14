@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-user',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  @Input('user-data') user:any;
+  constructor() { 
+    this.user = ''
+  }
 
   ngOnInit(): void {
   }
