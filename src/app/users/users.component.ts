@@ -1,6 +1,6 @@
 /*Decoratore funzione che aggiunge cose ad una classe normale*/
 import { Component, EventEmitter, OnInit, Output } from '@angular/core'; 
-import { User } from '../interface/user';
+import { User } from '../classes/User';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -24,7 +24,8 @@ export class UsersComponent implements OnInit {
     }
     onSelectUser(user:User){
         //alert(user.lastname)
-        this.updateUser.emit(user)
+        const userCopy = Object.assign({},user)
+        this.updateUser.emit(userCopy)
     }
     
 } /*Esportiamo il modulo per poterlo usare*/

@@ -1,11 +1,12 @@
-import { User } from '../interface/user';
 import { Injectable } from "@angular/core";
+import { User } from '../classes/User';
 
 @Injectable()
 export class UserService{
 user: User[] =
     [
         {
+            id:1,
             name: 'Mario',
             lastname: 'Rossi',
             email: 'mario.rossi@gmail.com',
@@ -14,6 +15,7 @@ user: User[] =
             province: 'AV',
         },
         {
+            id:2,
             name: 'Raffaella',
             lastname: 'Colombo',
             email: 'raffaella.colombo@jourrapide.com',
@@ -22,6 +24,7 @@ user: User[] =
             province: 'LU'
         },
         {
+            id:3,
             name: 'Pierino',
             lastname: 'Bellucci',
             email: 'pierino.bellucci@libero.it',

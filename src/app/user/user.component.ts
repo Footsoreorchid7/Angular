@@ -1,9 +1,9 @@
 
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { User } from '../interface/user';
-import { UserService } from '../services/user.service';
 
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { UserService } from '../services/user.service';
+import { User } from '../classes/User';
 
 @Component({
   selector: 'tr[app-user]',
