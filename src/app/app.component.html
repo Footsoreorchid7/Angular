@@ -502,6 +502,7 @@
     <app-users (updateUser)="updateUser($event)"></app-users>
   </div>
   <div class="userDetail" *ngIf="showForm">
+    <!--<div class="userDetail" *ngIf="userSelected">-->
     <app-user-details [user]="userSelected"></app-user-details>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { User } from '../classes/User';
+import { UserInterface } from "../interface/user";
 
 @Injectable()
 export class UserService{
@@ -37,11 +38,19 @@ user: User[] =
         return this.user;
     }
 
-    deleteUser(user:any){
+    deleteUser(user:User){
         let index = this.user.indexOf(user);
         if(index >= 0)
         {
             this.user.splice(index,1);
+        }
+    }
+
+    updateUser(user:UserInterface){
+        const idx = this.user.findIndex((v) => v.id === user.id)
+        alert(idx);
+        if (idx != -1){
+            this.user[idx] = user;
         }
     }
 
