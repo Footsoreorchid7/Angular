@@ -53,5 +53,8 @@ user: User[] =
             this.user[idx] = user;
         }
     }
+    createUser(user:UserInterface){
+            this.user.splice(0,0,user);
+    }
 
 }
