@@ -8,13 +8,17 @@ import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormsModule } from '@angular/forms';
+import { UcfirstPipe } from './ucfirst.pipe';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    UcfirstPipe,
+    NavComponent
   ],
   imports: [
     BrowserModule,

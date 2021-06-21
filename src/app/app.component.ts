@@ -7,7 +7,7 @@ import { User } from './classes/User';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-second-first-app';
+  title = 'my second first app';
   userSelected:User = new User();
 
   showForm : boolean = false;
