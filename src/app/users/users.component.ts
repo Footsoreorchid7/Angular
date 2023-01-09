@@ -11,6 +11,7 @@ import { UserService } from './user.service';
 export class UsersComponent implements OnInit {
     title= 'Utenti';
     users = Array();
+    
     constructor (private service: UserService){
     }
     ngOnInit(){
